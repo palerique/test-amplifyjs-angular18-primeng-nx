@@ -3,9 +3,9 @@ import {Button} from 'primeng/button';
 import {TooltipModule} from 'primeng/tooltip';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-about',
   standalone: true,
-  template: '' + '<p-button label="Increment" (click)="increment()" pTooltip="Xpto!!" tooltipPosition="top"></p-button>',
+  template: '<h1>About is working as expected</h1>',
   styles: [],
   imports: [Button, TooltipModule],
 })
