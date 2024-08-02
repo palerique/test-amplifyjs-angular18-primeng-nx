@@ -4,6 +4,8 @@ import {AppTopBarComponent} from '../components/topbar/app.topbar.component';
 import {Router, RouterOutlet} from '@angular/router';
 import {LayoutService} from '../services/app.layout.service';
 import {AppSidebarComponent} from '../components/sidebar/app.sidebar.component';
+import {AppFooterComponent} from '../components/footer/app.footer.component';
+import {AppConfigComponent} from '../components/config/app.config.component';
 
 @Component({
   selector: 'app-home',
@@ -18,14 +20,14 @@ import {AppSidebarComponent} from '../components/sidebar/app.sidebar.component';
         <div class="layout-main">
           <router-outlet></router-outlet>
         </div>
-        <!--        <app-footer></app-footer>-->
+        <app-footer></app-footer>
       </div>
-      <!--      <app-config></app-config>-->
+      <app-config></app-config>
       <div class="layout-mask"></div>
     </div>
   `,
   styles: [],
-  imports: [NgClass, AppTopBarComponent, RouterOutlet, AppSidebarComponent],
+  imports: [NgClass, AppTopBarComponent, RouterOutlet, AppSidebarComponent, AppFooterComponent, AppConfigComponent],
 })
 export default class HomeComponent {
   count = signal(0);
